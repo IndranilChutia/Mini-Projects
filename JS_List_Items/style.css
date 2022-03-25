@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+.myList{
+    margin-top: 8px;
+}
+.info{
+    padding: 4px;
+}
+
+.editor{
+    background-color: green;
+    max-width: 50px;
+    padding: 4px;
+    color: white;
+    font-size: 0.8em;
+    margin: 0 10px;
+}
+
+.deleter{
+    background-color: red;
+    max-width: 50px;
+    padding: 4px;
+    color: white;
+    font-size: 0.8em;
+}
+
