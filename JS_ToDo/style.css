@@ -1,27 +1,190 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-.myList{
-    margin-top: 8px;
-}
-.info{
-    padding: 4px;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+    font-family: 'Inter', sans-serif;
 }
 
+body{
+    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%)
+}
+
+.main{
+    border-radius: 5px;
+    width: 500px;
+    margin: 100px auto;
+    height: 500px;
+    padding: 20px 40px;
+    background-color: #F9F9F9;
+    top: 500px;
+    overflow-y: hidden;
+}
+
+.nav{
+    border-bottom:1px solid #fac8bf;
+}
+
+h1{
+    color: #212121;
+}
+
+.addItems{
+    display: flex;
+    margin: 15px 0;
+}
+
+#inputField{
+    height: 40px;
+    width: 390px;
+    /* background-color: #fad0c4; */
+    border: 2px solid #F68989;
+    border-radius: 4px;
+}
+
+#textInput{
+    margin: 0 0 0 10px;
+    height: 40px;
+    width: 350px;
+    background-color: transparent;
+    border: 0;
+    font-size: 16px;
+}
+
+#textInput:focus{
+    outline: none;
+}
+
+#addItemButton{
+    width: 40px;
+    height: 40px;
+    background-color: #F68989;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+}
+#buttonImage{
+    margin-top: 2px;
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+
+ul li{
+    list-style: none;
+    font-weight: 500;
+}
+
+.hero{
+    margin-top: 30px;
+    height: 270px;
+    overflow-y: auto;
+    border-bottom: 1px solid#fac8bf;
+}
+.myList{
+    margin: 10px 0px;
+}
+
+.container{
+    width: 410px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid; */
+    border-radius: 3px;
+}
+
+.container:hover .editor{
+    right: 50px;
+}
+
+.editor:hover{
+    background-color: #16C79A;
+}
+
+.container:hover .deleter{
+    right: 0px;
+}
+
+.deleter:hover{
+    background-color: #FF5C8D;
+}
+
+
+
+.info{
+    margin-left:30px;
+    margin-top: 4px;
+    position: absolute;
+}
+
+.info:focus{
+    width: auto;
+    height: 20px;
+}
+
+
 .editor{
-    background-color: green;
-    max-width: 50px;
-    padding: 4px;
+    background-color: #28cea4;
+    text-align: center;
+    width: 40px;
+    height: 29px;
+    padding-top: 5px;
     color: white;
     font-size: 0.8em;
-    margin: 0 10px;
+    position: absolute;
+    right: -50px;
+    cursor: pointer;
+    border-radius: 3px 0 0 3px;
+    transition: all 0.2s ease;
 }
 
 .deleter{
-    background-color: red;
-    max-width: 50px;
-    padding: 4px;
+    background-color: #f37a9e;
+    text-align: center;
+    width: 50px;
+    height: 29px;
+    padding-top: 5px;
     color: white;
     font-size: 0.8em;
+    position: absolute;
+    right: -50px;
+    cursor: pointer;
+    border-radius:  0 3px 3px 0;
+    transition: all 0.2s ease;
 }
+
+
+.footer{
+    margin-top: 30px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    max-width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ff9da0;
+    border-radius: 10px;
+    height: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f3797d;
+  }
 

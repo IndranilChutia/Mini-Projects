@@ -1,16 +1,17 @@
+'use strict';
+
 //Creating an array to save in local storage
 const curArray = []
-
+const main = document.querySelector('.main')
 // Select the hero section
 const hero = document.querySelector('.hero')
 
-// Creates the input field
-const myInput = createMyElement(hero, 'input', 'main')
-myInput.setAttribute('type','text')
+// Selects the input field
+const myInput = document.querySelector('#textInput')
+// myInput.setAttribute('type','text')
 
-//Creates the add item button
-const myButton = createMyElement(hero, 'button', 'button')
-myButton.textContent = "Add New Task"
+//Selects the add item button
+const myButton = document.querySelector('#addItemButton')
 
 // Creates the unordered list
 const myList = createMyElement(hero, 'ul', 'myList')
@@ -28,6 +29,8 @@ function updator(){
     /*Local storage stores string. so we have to use JSON.stringify 
     to store the array in an array like string*/
     localStorage.setItem('curArray',JSON.stringify(curArray)) 
+    const counterText = document.querySelector('.counterText')
+    counterText.textContent = `You have ${curArray.length} tasks ToDo!`
 }
 
 
@@ -47,7 +50,17 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     }
 })
 
-
+myInput.addEventListener('keypress', (e) =>{
+    if(e.key === 'Enter'){
+        let listItem = myInput.value
+        if(listItem.length>3){
+        const li = addNewItem(listItem)
+        myInput.value=''
+    } else{
+        alert('Enter more than 3 characters')
+    }
+}
+})
 
 // On-click event listener for the "Add New User" button
 myButton.addEventListener('click', (e) =>{
@@ -55,6 +68,8 @@ myButton.addEventListener('click', (e) =>{
     if(listItem.length>3){
         const li = addNewItem(listItem)
         myInput.value=''
+    } else{
+        alert('Enter more than 3 characters')
     }
 })
 
@@ -79,10 +94,11 @@ function addNewItem(listItem){
     deleteButton.textContent = 'Delete'
 
 
+
     // Add event listener to edit and delete buttons
     editButton.addEventListener('click', (e)=>{
         if(editButton.textContent === 'Edit'){
-            textItem.style.backgroundColor = 'Yellow'
+            textItem.style.backgroundColor = '#FBACCC'
             textItem.setAttribute('contenteditable', true)
             editButton.textContent = 'Save'
         } else{
