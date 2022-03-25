@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 </head>
+
 <body>
-    <div class="hero"></div>
+    <div class="main">
+        <div class="nav">
+            <h1>Just do it!</h1>
+            <div class="addItems">
+                <div id="inputField">
+                    <input type="text" placeholder="Enter you task" id="textInput" />
+                </div>
+                <button id="addItemButton">
+                    <img id="buttonImage" src="assets/plus.png" alt="Add-Item" />
+                </button>
+            </div>
+        </div>
+        <div class="hero"></div>
+        <div class="footer">
+            <span class="counterText">You have 0 tasks ToDo!</span>
+        </div>
+    </div>
     <script src="list.js"></script>
 </body>
+
 </html>
