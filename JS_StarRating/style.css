@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.stars ul{
+    list-style: none;
+}
+
+.star{
+    font-size: 2em;
+    color: #ddd;
+    display: inline-block;
+}
+
+.yellow{
+    color: yellow;
+}
+
+.gold{
+    color: goldenrod;
+}
+
+.output{
+    background-color: #ddd;
+    border: 1px solid #eee;
+    margin: 20px 0;
+    padding: 10px;
+}
